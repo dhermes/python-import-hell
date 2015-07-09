@@ -2,6 +2,7 @@ import sys
 
 
 IDS_FOUND = {}
+VALUES_FOR_IDS_FOUND = {}
 
 
 def report_imports():
@@ -16,12 +17,15 @@ def report_imports():
         id_renumber = 0
 
     for key in sorted(found.keys()):
-        curr_id = id(found[key])
+        value = found[key]
+        curr_id = id(value)
         if curr_id not in IDS_FOUND:
             IDS_FOUND[curr_id] = id_renumber
+            VALUES_FOR_IDS_FOUND[curr_id] = (key, value)
             id_renumber += 1
         else:
-            raise ValueError('Module repeated.')
+            if VALUES_FOR_IDS_FOUND.get(curr_id) != (key, value):
+                raise ValueError('Module repeated.')
 
         id_val = IDS_FOUND[curr_id]
         message = '    keyname: %20s, module is: %d' % (key, id_val)
