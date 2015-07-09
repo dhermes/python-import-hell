@@ -36,10 +36,17 @@ def report_imports():
 print('---- Before imports')
 report_imports()
 print('---------------------------------')
+
+import foo
+print('---- After foo import')
+report_imports()
+print('---------------------------------')
+
 from foo.google import baz
 print('---- After foo.google.baz import')
 report_imports()
 print('---------------------------------')
+
 from foo.google import bing
 print('---- After foo.google.bing import')
 report_imports()

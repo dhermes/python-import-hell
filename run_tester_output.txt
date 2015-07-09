@@ -4,6 +4,10 @@ python2.6 import_tester.py
 ---- Before imports
     keyname:                    google, module is: 0
 ---------------------------------
+---- After foo import
+    keyname:                foo.google, module is: 0
+    keyname:                    google, module is: 0
+---------------------------------
     foo/google/baz.py imported (also imports bing)
     foo/google/bing.py imported
 ---- After foo.google.baz import
@@ -20,6 +24,10 @@ python2.6 import_tester.py
 ---------------------------------
 python2.7 import_tester.py
 ---- Before imports
+    keyname:                    google, module is: 0
+---------------------------------
+---- After foo import
+    keyname:                foo.google, module is: 0
     keyname:                    google, module is: 0
 ---------------------------------
     foo/google/baz.py imported (also imports bing)
@@ -40,6 +48,10 @@ python3.3 import_tester.py
 ---- Before imports
     keyname:                    google, module is: 0
 ---------------------------------
+---- After foo import
+    keyname:                foo.google, module is: 0
+    keyname:                    google, module is: 0
+---------------------------------
     foo/google/baz.py imported (also imports bing)
     foo/google/bing.py imported
 ---- After foo.google.baz import
@@ -56,6 +68,10 @@ python3.3 import_tester.py
 ---------------------------------
 python3.4 import_tester.py
 ---- Before imports
+    keyname:                    google, module is: 0
+---------------------------------
+---- After foo import
+    keyname:                foo.google, module is: 0
     keyname:                    google, module is: 0
 ---------------------------------
     foo/google/baz.py imported (also imports bing)
