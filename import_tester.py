@@ -20,6 +20,8 @@ def report_imports():
         if curr_id not in IDS_FOUND:
             IDS_FOUND[curr_id] = id_renumber
             id_renumber += 1
+        else:
+            raise ValueError('Module repeated.')
 
         id_val = IDS_FOUND[curr_id]
         message = '    keyname: %20s, module is: %d' % (key, id_val)
