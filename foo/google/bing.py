@@ -1,1 +1,1 @@
-print('    foo/google/__bing__.py imported')
+print('    foo/google/bing.py imported')
