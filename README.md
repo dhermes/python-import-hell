@@ -14,10 +14,12 @@ The package has the following structure:
 ```
 foo/
     __init__.py
-    google/
-        baz.py
-        bing.py
+    _generated/
         __init__.py
+        google/
+            baz.py
+            bing.py
+            __init__.py
 ```
 
 The `baz` module imports the `bing` module, but (under the
@@ -30,7 +32,7 @@ from google import bing
 rather than the absolute import
 
 ```python
-from foo.google import bing
+from foo._generated.google import bing
 ```
 
 ## What is the Problem?
@@ -39,8 +41,8 @@ When using code like this, user code may execute something
 like
 
 ```python
-from foo.google import bing
-from foo.google import baz
+from foo._generated.google import bing
+from foo._generated.google import baz
 ```
 
 which actually imports `bing` twice (once directly and once
@@ -56,17 +58,17 @@ import breaks the uniqueness assumption.
 ## How do we fix it?
 
 We fix it by requiring that the generated imports (e.g.
-`from google import bing`) happen as absolute imports
+`from google import bing`) happen as absolute imports via:
 
 ```python
 from __future__ import absolute_import
 ```
 
 i.e. from the `google` package rather than from the
-`foo.google` sub-package.
+`foo._generated.google` sub-package.
 
 In addition, we manually patch the existing `google`
-package (`module` object) and alias the `foo.google`
+package (`module` object) and alias the `foo._generated.google`
 object to agree with it
 
 ```python
@@ -74,7 +76,7 @@ from __future__ import absolute_import
 import sys
 import google
 google.__path__.append('path/to/local/google')
-alternate_key = __name__ + '.google'
+alternate_key = __name__ + '._generated.google'
 if alternate_key in sys.modules:
     raise ImportError(alternate_key, 'has already been imported')
 # Re-use the module

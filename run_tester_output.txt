@@ -5,20 +5,20 @@ python2.6 import_tester.py
     keyname:                    google, module is: 0
 ---------------------------------
 ---- After foo import
-    keyname:                foo.google, module is: 0
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
 ---------------------------------
-    foo/google/baz.py imported (also imports bing)
-    foo/google/bing.py imported
----- After foo.google.baz import
-    keyname:                foo.google, module is: 0
-    keyname:            foo.google.baz, module is: 1
+    foo/_generated/google/baz.py imported (also imports bing)
+    foo/_generated/google/bing.py imported
+---- After foo._generated.google.baz import
+    keyname:     foo._generated.google, module is: 0
+    keyname: foo._generated.google.baz, module is: 1
     keyname:                    google, module is: 0
     keyname:               google.bing, module is: 2
 ---------------------------------
----- After foo.google.bing import
-    keyname:                foo.google, module is: 0
-    keyname:            foo.google.baz, module is: 1
+---- After foo._generated.google.bing import
+    keyname:     foo._generated.google, module is: 0
+    keyname: foo._generated.google.baz, module is: 1
     keyname:                    google, module is: 0
     keyname:               google.bing, module is: 2
 ---------------------------------
@@ -27,20 +27,20 @@ python2.7 import_tester.py
     keyname:                    google, module is: 0
 ---------------------------------
 ---- After foo import
-    keyname:                foo.google, module is: 0
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
 ---------------------------------
-    foo/google/baz.py imported (also imports bing)
-    foo/google/bing.py imported
----- After foo.google.baz import
-    keyname:                foo.google, module is: 0
-    keyname:            foo.google.baz, module is: 1
+    foo/_generated/google/baz.py imported (also imports bing)
+    foo/_generated/google/bing.py imported
+---- After foo._generated.google.baz import
+    keyname:     foo._generated.google, module is: 0
+    keyname: foo._generated.google.baz, module is: 1
     keyname:                    google, module is: 0
     keyname:               google.bing, module is: 2
 ---------------------------------
----- After foo.google.bing import
-    keyname:                foo.google, module is: 0
-    keyname:            foo.google.baz, module is: 1
+---- After foo._generated.google.bing import
+    keyname:     foo._generated.google, module is: 0
+    keyname: foo._generated.google.baz, module is: 1
     keyname:                    google, module is: 0
     keyname:               google.bing, module is: 2
 ---------------------------------
@@ -49,19 +49,19 @@ python3.3 import_tester.py
     keyname:                    google, module is: 0
 ---------------------------------
 ---- After foo import
-    keyname:                foo.google, module is: 0
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
 ---------------------------------
-    foo/google/baz.py imported (also imports bing)
-    foo/google/bing.py imported
----- After foo.google.baz import
-    keyname:                foo.google, module is: 0
+    foo/_generated/google/baz.py imported (also imports bing)
+    foo/_generated/google/bing.py imported
+---- After foo._generated.google.baz import
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2
 ---------------------------------
----- After foo.google.bing import
-    keyname:                foo.google, module is: 0
+---- After foo._generated.google.bing import
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2
@@ -71,19 +71,19 @@ python3.4 import_tester.py
     keyname:                    google, module is: 0
 ---------------------------------
 ---- After foo import
-    keyname:                foo.google, module is: 0
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
 ---------------------------------
-    foo/google/baz.py imported (also imports bing)
-    foo/google/bing.py imported
----- After foo.google.baz import
-    keyname:                foo.google, module is: 0
+    foo/_generated/google/baz.py imported (also imports bing)
+    foo/_generated/google/bing.py imported
+---- After foo._generated.google.baz import
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2
 ---------------------------------
----- After foo.google.bing import
-    keyname:                foo.google, module is: 0
+---- After foo._generated.google.bing import
+    keyname:     foo._generated.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2

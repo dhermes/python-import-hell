@@ -42,12 +42,12 @@ print('---- After foo import')
 report_imports()
 print('---------------------------------')
 
-from foo.google import baz
-print('---- After foo.google.baz import')
+from foo._generated.google import baz
+print('---- After foo._generated.google.baz import')
 report_imports()
 print('---------------------------------')
 
-from foo.google import bing
-print('---- After foo.google.bing import')
+from foo._generated.google import bing
+print('---- After foo._generated.google.bing import')
 report_imports()
 print('---------------------------------')
