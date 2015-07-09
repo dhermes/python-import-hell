@@ -27,13 +27,9 @@ def report_imports():
             stored_key, stored_val = VALUES_FOR_IDS_FOUND[curr_id]
             if value != stored_val:
                 raise ValueError('Module repeated.')
-            if key != stored_key:
-                print(
-                    '    !!Differing keys for same module: %s <--> %s' % (
-                    key, stored_key))
 
         id_val = IDS_FOUND[curr_id]
-        message = '    keyname: %20s, module is: %d' % (key, id_val)
+        message = '    keyname: %25s, module is: %d' % (key, id_val)
         print(message)
 
 

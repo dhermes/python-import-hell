@@ -2,85 +2,77 @@ $ ./run_tester.sh > run_tester_output.txt 2>&1
 
 python2.6 import_tester.py
 ---- Before imports
-    keyname:               google, module is: 0
+    keyname:                    google, module is: 0
 ---------------------------------
     foo/google/baz.py imported (also imports bing)
     foo/google/bing.py imported
 ---- After foo.google.baz import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:       foo.google.baz, module is: 1
-    keyname:    foo.google.google, module is: 2
-    keyname:               google, module is: 0
-    keyname:          google.bing, module is: 3
+    keyname:                foo.google, module is: 0
+    keyname:            foo.google.baz, module is: 1
+    keyname:         foo.google.google, module is: 2
+    keyname:                    google, module is: 0
+    keyname:               google.bing, module is: 3
 ---------------------------------
 ---- After foo.google.bing import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:       foo.google.baz, module is: 1
-    keyname:    foo.google.google, module is: 2
-    keyname:               google, module is: 0
-    keyname:          google.bing, module is: 3
+    keyname:                foo.google, module is: 0
+    keyname:            foo.google.baz, module is: 1
+    keyname:         foo.google.google, module is: 2
+    keyname:                    google, module is: 0
+    keyname:               google.bing, module is: 3
 ---------------------------------
 python2.7 import_tester.py
 ---- Before imports
-    keyname:               google, module is: 0
+    keyname:                    google, module is: 0
 ---------------------------------
     foo/google/baz.py imported (also imports bing)
     foo/google/bing.py imported
 ---- After foo.google.baz import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:       foo.google.baz, module is: 1
-    keyname:    foo.google.google, module is: 2
-    keyname:               google, module is: 0
-    keyname:          google.bing, module is: 3
+    keyname:                foo.google, module is: 0
+    keyname:            foo.google.baz, module is: 1
+    keyname:         foo.google.google, module is: 2
+    keyname:                    google, module is: 0
+    keyname:               google.bing, module is: 3
 ---------------------------------
 ---- After foo.google.bing import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:       foo.google.baz, module is: 1
-    keyname:    foo.google.google, module is: 2
-    keyname:               google, module is: 0
-    keyname:          google.bing, module is: 3
+    keyname:                foo.google, module is: 0
+    keyname:            foo.google.baz, module is: 1
+    keyname:         foo.google.google, module is: 2
+    keyname:                    google, module is: 0
+    keyname:               google.bing, module is: 3
 ---------------------------------
 python3.3 import_tester.py
 ---- Before imports
-    keyname:               google, module is: 0
+    keyname:                    google, module is: 0
 ---------------------------------
     foo/google/baz.py imported (also imports bing)
     foo/google/bing.py imported
 ---- After foo.google.baz import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:               google, module is: 0
-    keyname:           google.baz, module is: 1
-    keyname:          google.bing, module is: 2
+    keyname:                foo.google, module is: 0
+    keyname:                    google, module is: 0
+    keyname:                google.baz, module is: 1
+    keyname:               google.bing, module is: 2
 ---------------------------------
 ---- After foo.google.bing import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:               google, module is: 0
-    keyname:           google.baz, module is: 1
-    keyname:          google.bing, module is: 2
+    keyname:                foo.google, module is: 0
+    keyname:                    google, module is: 0
+    keyname:                google.baz, module is: 1
+    keyname:               google.bing, module is: 2
 ---------------------------------
 python3.4 import_tester.py
 ---- Before imports
-    keyname:               google, module is: 0
+    keyname:                    google, module is: 0
 ---------------------------------
     foo/google/baz.py imported (also imports bing)
     foo/google/bing.py imported
 ---- After foo.google.baz import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:               google, module is: 0
-    keyname:           google.baz, module is: 1
-    keyname:          google.bing, module is: 2
+    keyname:                foo.google, module is: 0
+    keyname:                    google, module is: 0
+    keyname:                google.baz, module is: 1
+    keyname:               google.bing, module is: 2
 ---------------------------------
 ---- After foo.google.bing import
-    !!Differing keys for same module: foo.google <--> google
-    keyname:           foo.google, module is: 0
-    keyname:               google, module is: 0
-    keyname:           google.baz, module is: 1
-    keyname:          google.bing, module is: 2
+    keyname:                foo.google, module is: 0
+    keyname:                    google, module is: 0
+    keyname:                google.baz, module is: 1
+    keyname:               google.bing, module is: 2
 ---------------------------------
