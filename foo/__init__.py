@@ -8,5 +8,6 @@ google.__path__.append(LOCAL_GOOGLE)
 import sys
 alternate_key = __name__ + '.google'
 if alternate_key in sys.modules:
-    raise ValueError(alternate_key)
+    raise ImportError(alternate_key, 'has already been imported')
+# Re-use the module
 sys.modules[alternate_key] = google
