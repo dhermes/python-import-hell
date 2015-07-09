@@ -9,16 +9,16 @@ python2.6 import_tester.py
 ---- After foo.google.baz import
     keyname:                foo.google, module is: 0
     keyname:            foo.google.baz, module is: 1
-    keyname:         foo.google.google, module is: 2
+    keyname:         foo.google.google, module is: 0
+    keyname:    foo.google.google.bing, module is: 2
     keyname:                    google, module is: 0
-    keyname:               google.bing, module is: 3
 ---------------------------------
 ---- After foo.google.bing import
     keyname:                foo.google, module is: 0
     keyname:            foo.google.baz, module is: 1
-    keyname:         foo.google.google, module is: 2
+    keyname:         foo.google.google, module is: 0
+    keyname:    foo.google.google.bing, module is: 2
     keyname:                    google, module is: 0
-    keyname:               google.bing, module is: 3
 ---------------------------------
 python2.7 import_tester.py
 ---- Before imports
@@ -29,16 +29,16 @@ python2.7 import_tester.py
 ---- After foo.google.baz import
     keyname:                foo.google, module is: 0
     keyname:            foo.google.baz, module is: 1
-    keyname:         foo.google.google, module is: 2
+    keyname:         foo.google.google, module is: 0
+    keyname:    foo.google.google.bing, module is: 2
     keyname:                    google, module is: 0
-    keyname:               google.bing, module is: 3
 ---------------------------------
 ---- After foo.google.bing import
     keyname:                foo.google, module is: 0
     keyname:            foo.google.baz, module is: 1
-    keyname:         foo.google.google, module is: 2
+    keyname:         foo.google.google, module is: 0
+    keyname:    foo.google.google.bing, module is: 2
     keyname:                    google, module is: 0
-    keyname:               google.bing, module is: 3
 ---------------------------------
 python3.3 import_tester.py
 ---- Before imports
@@ -48,12 +48,14 @@ python3.3 import_tester.py
     foo/google/bing.py imported
 ---- After foo.google.baz import
     keyname:                foo.google, module is: 0
+    keyname:         foo.google.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2
 ---------------------------------
 ---- After foo.google.bing import
     keyname:                foo.google, module is: 0
+    keyname:         foo.google.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2
@@ -66,12 +68,14 @@ python3.4 import_tester.py
     foo/google/bing.py imported
 ---- After foo.google.baz import
     keyname:                foo.google, module is: 0
+    keyname:         foo.google.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2
 ---------------------------------
 ---- After foo.google.bing import
     keyname:                foo.google, module is: 0
+    keyname:         foo.google.google, module is: 0
     keyname:                    google, module is: 0
     keyname:                google.baz, module is: 1
     keyname:               google.bing, module is: 2

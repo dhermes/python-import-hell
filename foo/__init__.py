@@ -10,3 +10,7 @@ alternate_key = __name__ + '.google'
 if alternate_key in sys.modules:
     raise ValueError(alternate_key)
 sys.modules[alternate_key] = google
+alternate_key2 = alternate_key + '.google'
+if alternate_key2 in sys.modules:
+    raise ValueError(alternate_key2)
+sys.modules[alternate_key2] = google
